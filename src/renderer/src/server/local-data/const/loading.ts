@@ -1,6 +1,6 @@
 import { loadingType } from '@renderer/type'
 
-export const LOADINGSTR: loadingType.MIloadingStr[] = [
+const LOADINGSTR: loadingType.MIloadingStr[] = [
   {
     name: 'N',
     key: 0,
@@ -52,3 +52,5 @@ export const LOADINGSTR: loadingType.MIloadingStr[] = [
     color: '#f9c8f5'
   }
 ]
+
+export default LOADINGSTR

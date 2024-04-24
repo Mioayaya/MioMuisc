@@ -1,3 +1,4 @@
-import * as loadingData from './local-data/loading'
+import LOADINGSTR from './local-data/const/loading'
+import MioRouterList from './local-data/const/route'
 
-export { loadingData }
+export { LOADINGSTR, MioRouterList }

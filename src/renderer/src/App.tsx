@@ -1,14 +1,15 @@
-import MioHome from './pages/home'
-import methods from './utils'
+import { useRoutes } from 'react-router'
+import router from './router'
 
 function App(): JSX.Element {
   // const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
+  const routes = useRoutes(router)
 
   return (
     <>
-      <h2>hello electron</h2>
-      <h3>print {methods.addNum(1, 2)} </h3>
-      <MioHome />
+      <h1>Top Bar</h1>
+      {routes}
+      <h2>play Bar</h2>
     </>
   )
 }

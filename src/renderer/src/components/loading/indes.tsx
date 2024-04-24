@@ -1,4 +1,4 @@
-import { loadingData } from '@renderer/server'
+import { LOADINGSTR } from '@renderer/server'
 import { FC, useEffect, useState } from 'react'
 import { MioLoadingDiv } from './style'
 
@@ -8,7 +8,7 @@ const MioLoading: FC = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (jumpIndex === loadingData.LOADINGSTR.length - 1) {
+      if (jumpIndex === LOADINGSTR.length - 1) {
         setTimeout(() => {
           setJumpIndex(0)
         }, 666)
@@ -26,8 +26,8 @@ const MioLoading: FC = () => {
       _number == 1 ||
       _number == 2 ||
       _number == 0 ||
-      _number2 == loadingData.LOADINGSTR.length - 1 ||
-      _number2 == loadingData.LOADINGSTR.length - 2
+      _number2 == LOADINGSTR.length - 1 ||
+      _number2 == LOADINGSTR.length - 2
     ) {
       _str = `${_str} active`
     }
@@ -37,7 +37,7 @@ const MioLoading: FC = () => {
   return (
     <MioLoadingDiv>
       <div className="loading">
-        {loadingData.LOADINGSTR.map((item, index) => (
+        {LOADINGSTR.map((item, index) => (
           <p
             key={item.key}
             className={jumpStr(index)}
