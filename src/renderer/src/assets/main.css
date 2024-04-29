@@ -22,3 +22,22 @@ body {
     'Helvetica Neue',
     sans-serif;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 0.625rem;
+  background-color: rgba(255, 255, 255, 0);
+}

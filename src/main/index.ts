@@ -9,8 +9,8 @@ function createWindow(): void {
     width: 1375,
     height: 820,
     //窗口
-    show: true,
-    frame: true,
+    show: false,
+    frame: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {

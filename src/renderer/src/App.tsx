@@ -1,16 +1,17 @@
-import { useRoutes } from 'react-router'
-import router from './router'
+import MioTopBar from './components/top-bar'
+import { AppDiv } from './css'
+import MioPlayBar from './components/play-bar'
+import MioContain from './components/contain'
 
 function App(): JSX.Element {
   // const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
-  const routes = useRoutes(router)
 
   return (
-    <>
-      <h1>Top Bar</h1>
-      {routes}
-      <h2>play Bar</h2>
-    </>
+    <AppDiv>
+      <MioTopBar />
+      <MioContain />
+      <MioPlayBar />
+    </AppDiv>
   )
 }
 
