@@ -1,9 +1,13 @@
 import styled from '@emotion/styled'
-import { CONFIGURATION } from '@renderer/server'
+import { CONFIGURATION, THEME, ThemeColor } from '@renderer/server'
 
-export const MioPlayBarDiv = styled.div`
+type Iprops = {
+  theme: THEME
+}
+
+export const MioPlayBarDiv = styled.div<Iprops>`
   width: 100%;
   height: ${CONFIGURATION.playBar};
-  background-color: black;
+  background-color: ${(props): string => ThemeColor[props.theme as THEME].playBar};
   color: white;
 `

@@ -1,5 +1,8 @@
+import { THEME } from '@renderer/server'
+
 export interface MIslice {
   userSlice: MIuserSlice
+  configSlice: MIconfigSlice
 }
 
 export interface MIuserSlice {
@@ -7,4 +10,8 @@ export interface MIuserSlice {
   userData: {
     [s: string]: string
   } | null
+}
+
+export interface MIconfigSlice {
+  theme: THEME
 }
