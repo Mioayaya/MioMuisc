@@ -6,7 +6,6 @@ export const MioTopBarDiv = styled.div`
   align-items: center;
   width: 100%;
   height: ${CONFIGURATION.topBar};
-  background-color: blanchedalmond;
   img {
     height: 40px;
     width: 78px;
