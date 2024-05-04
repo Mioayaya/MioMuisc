@@ -26,7 +26,4 @@ export const AppDiv = styled.div`
       object-position: center center;
     }
   }
-  > *:not(.bg) {
-    opacity: 0.75;
-  }
 `

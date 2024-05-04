@@ -7,16 +7,18 @@ import { THEME } from '@renderer/server'
 
 const MioTopBar: FC = () => {
   const theme = useSelector<storeType.MIslice, THEME>((state) => state.configSlice.theme)
-  const clickTest = (): void => {
-    console.log('tes')
-  }
-  console.log(theme)
 
   return (
     <MioTopBarDiv theme={theme}>
-      <img src={reactLogo} alt="logo" className="logo" />
-      <h1>Top Bar </h1>
-      <button onClick={() => clickTest()}>click</button>
+      <div className="left">
+        <div className="img">
+          <img src={reactLogo} alt="logo" className="logo" />
+        </div>
+        <h1 className="title">MioMusic</h1>
+      </div>
+      <div className="right">
+        <span>top bar</span>
+      </div>
     </MioTopBarDiv>
   )
 }
