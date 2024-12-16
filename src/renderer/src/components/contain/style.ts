@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
-import { THEME, ThemeColor } from '@renderer/server'
+import { ITHEME, ThemeColor } from '@renderer/server'
 
 type Iprops = {
-  theme: THEME
+  theme: ITHEME
 }
 
 export const MioContainDiv = styled.div<Iprops>`
   flex: 1;
   display: flex;
-  background: ${(props): string => ThemeColor[props.theme as THEME].contain};
+  background: ${(props: Iprops): string => ThemeColor[props.theme].contain};
   .right {
     flex: 1;
   }

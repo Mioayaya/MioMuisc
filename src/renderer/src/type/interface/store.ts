@@ -1,4 +1,4 @@
-import { THEME } from '@renderer/server'
+import { ITHEME } from '@renderer/server'
 
 export interface MIslice {
   userSlice: MIuserSlice
@@ -13,5 +13,5 @@ export interface MIuserSlice {
 }
 
 export interface MIconfigSlice {
-  theme: THEME
+  theme: ITHEME
 }

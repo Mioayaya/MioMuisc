@@ -1,5 +1,5 @@
 type Icolor = {
-  [s in THEME]: {
+  [s in ITHEME]: {
     topBar: string // topbar 背景色
     contain: string // top ~ play 渐变
     playBar: string // playBar 背景色
@@ -12,7 +12,7 @@ export const ThemeColor: Icolor = {
     topBar: '#d9e3f6',
     // contain: `linear-gradient(to top,#fafafa,#d9e3f6)`,
     contain: '',
-    playBar: '#fafafa',
+    playBar: '#d9e3f6',
     opacity: '0.75'
   },
   Black: {
@@ -23,5 +23,5 @@ export const ThemeColor: Icolor = {
   }
 }
 
-export const colorList = ['KiTa', 'Black']
-export type THEME = 'KiTa' | 'Black'
+export const colorList: ITHEME[] = ['KiTa', 'Black']
+export type ITHEME = 'KiTa' | 'Black'

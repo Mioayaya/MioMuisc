@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { MioPlayBarDiv } from './style'
 import { useSelector } from 'react-redux'
 import { storeType } from '@renderer/type'
-import { THEME } from '@renderer/server'
+import { ITHEME } from '@renderer/server'
 
 const MioPlayBar: FC = () => {
-  const theme = useSelector<storeType.MIslice, THEME>((state) => state.configSlice.theme)
+  const theme = useSelector<storeType.MIslice, ITHEME>((state) => state.configSlice.theme)
 
   return (
     <MioPlayBarDiv theme={theme}>

@@ -28,6 +28,16 @@ function createWindow(): void {
     return { action: 'deny' }
   })
 
+  // 监听渲染进程的最小化请求
+  ipcMain.on('minimize-window', () => {
+    mainWindow.minimize()
+  })
+
+  // 监听渲染进程的关闭请求
+  ipcMain.on('close-window', () => {
+    mainWindow.close()
+  })
+
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {

@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
-import { CONFIGURATION, THEME, ThemeColor } from '@renderer/server'
+import { CONFIGURATION, ITHEME, ThemeColor } from '@renderer/server'
 
 type Iprops = {
-  theme: THEME
+  theme: ITHEME
 }
 
 export const MioTopBarDiv = styled.div<Iprops>`
@@ -10,8 +10,9 @@ export const MioTopBarDiv = styled.div<Iprops>`
   align-items: center;
   width: 100%;
   height: ${CONFIGURATION.topBar};
-  background-color: ${(props): string => ThemeColor[props.theme as THEME].topBar};
-  opacity: ${(props): string => ThemeColor[props.theme as THEME].opacity};
+  background-color: ${(props: Iprops): string => ThemeColor[props.theme].topBar};
+  opacity: ${(props: Iprops): string => ThemeColor[props.theme].opacity};
+  -webkit-app-region: drag;
 
   .left {
     width: ${CONFIGURATION.containLeft};
@@ -21,10 +22,22 @@ export const MioTopBarDiv = styled.div<Iprops>`
       margin: 0 10px;
       height: 40px;
       width: 78px;
+      -webkit-app-region: no-drag;
     }
   }
 
-  .right {
+  .middle {
     flex: 1;
+    background: red;
+  }
+
+  .right {
+    margin-right: 10px;
+    color: white;
+    background-color: black;
+  }
+
+  .btn {
+    -webkit-app-region: no-drag;
   }
 `

@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { THEME, colorList } from '@renderer/server'
+import { ITHEME, colorList } from '@renderer/server'
 import { storeType } from '@renderer/type'
+
+const initialState: storeType.MIconfigSlice = {
+  theme: colorList[0]
+}
 
 export const configSlice = createSlice({
   name: 'configSlice',
-  initialState: {
-    theme: colorList[0] as THEME
-  },
+  initialState: initialState,
   reducers: {
-    setTheme: (state: storeType.MIconfigSlice, { payload }: { payload: THEME }) => {
+    setTheme: (state: storeType.MIconfigSlice, { payload }: { payload: ITHEME }) => {
       state.theme = payload
     }
   }

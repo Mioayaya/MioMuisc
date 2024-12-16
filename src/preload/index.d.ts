@@ -1,8 +1,12 @@
-import { ElectronAPI } from '@electron-toolkit/preload'
+export interface IElectronAPI {
+  // loadPreferences: () => Promise<void>,
+  minimizeWindow: VoidFunction
+  closeWindow: VoidFunction
+}
 
 declare global {
   interface Window {
-    electron: ElectronAPI
+    electron: IElectronAPI
     api: unknown
   }
 }
